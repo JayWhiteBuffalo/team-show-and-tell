@@ -24,9 +24,4 @@ test("Checks employee methods", () => {
     expect(employee.getEmail()).toBe(employee.email);
 });
 
-
-
-
-//test getId()//
-//test getEmail()
 //test getRoll() // Returns 'employee'
