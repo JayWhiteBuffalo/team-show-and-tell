@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const Manager = require('./lib/Manager');
-const  {managerQuestions, engineerQuestions, internQuestions} = require('./lib/Questions');
+const  {managerQuestions, engineerQuestions, internQuestions, addQuestion, teamQuestion} = require('./lib/Questions');
 
 
 //Array from team members
@@ -16,8 +16,25 @@ const managerAnswers = () => {
         // The manager class now has a new obj with with properties of 'data'
         //push new manager obj to team member array
         teamArr.push(data);
-        console.log(teamArr);})
+        addPrompt();
+    })
         
     };
+
+    const addPrompt = () => {
+        inquirer.prompt(addQuestion)
+        .then((data) => {
+            if(data.add === 'true') {
+            console.log('Rugrats');
+        };}
+        )};
+
+    const addEmployee = () => {
+        inquirer.prompt(teamQuestion)
+        .then((data) => {
+            console.log(data);
+        })
+    };
+    
 
     getTeam();
