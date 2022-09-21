@@ -22,6 +22,9 @@ test("Checks employee methods", () => {
     
     expect(employee.getId()).toBe(employee.id);
     expect(employee.getEmail()).toBe(employee.email);
+    expect(employee.getRole()).toBe('Employee');
 });
+
+
 
 //test getRoll() // Returns 'employee'
