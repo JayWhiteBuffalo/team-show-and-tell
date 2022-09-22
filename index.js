@@ -3,7 +3,8 @@ const Engineer = require('./lib/Engineer');
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern')
 const  {managerQuestions, engineerQuestions, internQuestions, addQuestion, teamQuestion} = require('./lib/Questions');
-
+const fs = require('fs');
+const generatePage = require('./src/page-template');
 
 //Array from team members
 teamArr = [];
@@ -13,7 +14,7 @@ const getTeam = () => {addManager()}
 const addManager = () => {
     inquirer.prompt(managerQuestions)
     .then((data) => { //data is the obj returned from prompt
-        //create manager obj with data that was returned
+        //create manager obj with data th+*-at was returned
         data = new Manager(data.name, data.id, data.email, data.officeNumber)
         // The manager class now has a new obj with with properties of 'data'
         //push new manager obj to team member array
@@ -27,7 +28,7 @@ const addManager = () => {
         inquirer.prompt(addQuestion)
         .then(data => {
         if (data.add){return addEmployee();}
-        else { console.log('Write HTML File');
+        else { write()
         }})};
 
     const addEmployee = () => {
@@ -61,3 +62,12 @@ const addManager = () => {
     
 
     getTeam();
+    
+    function write() {
+        const pageHTML = generatePage(teamArr)
+        fs.writeFile('index.html', pageHTML, err => {
+            if (err) throw new Error(err);
+            console.log('Page created.')
+        });
+    }
+    
