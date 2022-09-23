@@ -64,9 +64,17 @@ cardArr.push(cards
     .filter((employee) => employee.getRole() === "Manager")
     .map((manager) => managerCard(manager)));
 
+cardArr.push(cards
+    .filter((employee) => employee.getRole() === "Engineer")
+    .map((engineer) => engineerCard(engineer)));
+  
+cardArr.push(cards
+    .filter((employee) => employee.getRole() === "Intern")
+    .map((intern) => internCard(intern)));
+  
+
+
     return cardArr.join("");
-
-
 
 };
 
