@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin: .5rem;
+    font-family: "Montserrat", sans-serif;
+    
+}
+
+.header{
+    background-color: var(--primary-color);
+    padding: 1.2em;
+    min-width: 100%;
+}
+
+.card-container{
+    
+}
+
+.title{
+    border-bottom: 2px solid black;
+    background-color: blue;
+    color: white;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: black;
+    font-weight: bolder;
+    
+}
+
+
+
+
+#Manager-card{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 3px solid black;
+    margin: 10px;
+    padding: auto;
+    width: 300px;
+    height: 220px;
+    text-align: center;
+    box-shadow: 2px 2px violet;
+    background-color: bisque;
+};
+
+#Engineer-card{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 3px solid black;
+    margin: 10px;
+    padding: auto;
+    width: 300px;
+    height: 220px;
+    text-align: center;
+    box-shadow: 2px 2px violet;
+    background-color: bisque;
+
+};
+
+
+#Intern-card{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 3px solid black;
+    margin: 10px;
+    padding: auto;
+    width: 300px;
+    height: 220px;
+    text-align: center;
+    box-shadow: 2px 2px violet;
+    background-color: bisque;
+};
