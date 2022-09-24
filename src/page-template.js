@@ -10,52 +10,58 @@ const teamCards = (cards) => {
 // Manager card 
 const managerCard = manager => {
     return `
+  <div class= " card-container col-sm-12 col-md-4">
     <div id="${manager.getRole()}-card">
-      <div>
-        <h2>${manager.getName()}</h2>
-        <h3>Role: ${manager.getRole()}</h3>
+      <div class = "title">
+          <h2 style = "font-weight: bold;">${manager.getName()}</h2>
+          <h3>Role: ${manager.getRole()}</h3>
       </div> 
-      <div>
+      <div class = "items">
         <ul>
           <li>ID: ${manager.getId()}</li>
           <li>Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
           <li>Office Number: ${manager.getOfficeNumber()}</li>
         </ul>
       </div>
-    </div>`
+    </div>
+  </div>`
 };
 
 const engineerCard = engineer => {
     return `
+  <div class= "col-sm-12 col-md-4">
     <div id="${engineer.getRole()}-card">
-      <div>
-        <h2>${engineer.getName()}</h2>
+      <div class = "title">
+        <h2 style = "font-weight: bold;">${engineer.getName()}</h2>
         <h3>Role: ${engineer.getRole()}</h3>
       </div> 
       <div>
         <ul>
           <li>ID: ${engineer.getId()}</li>
           <li>Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
-          <li>Office Number: ${engineer.getGithub()}</li>
+          <li>GitHub: <a href="www.github.com/${engineer.getGithub()}">${engineer.getGithub()}</a></li>
         </ul>
       </div>
-    </div>`
+    </div>
+  </div>`
 };
 
 const internCard = intern => {
     return `
+  <div class= "col-sm-12 col-md-4">
     <div id="${intern.getRole()}-card">
-      <div>
-        <h2>${intern.getName()}</h2>
+      <div class = "title">
+        <h2 style = "font-weight: bold;">${intern.getName()}</h2>
         <h3>Role: ${intern.getRole()}</h3>
       </div> 
       <div>
         <ul>
           <li>ID: ${intern.getId()}</li>
           <li>Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
-          <li>Office Number: ${intern.getSchool()}</li>
+          <li>School: ${intern.getSchool()}</li>
         </ul>
       </div>
+    </div>
     </div>`
 };
 
@@ -88,15 +94,14 @@ function templateData(cards){
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Portfolio Demo</title>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-      <link href="https://fonts.googleapis.com/css?family=Public+Sans:300i,300,500&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="style.css">
+      <title>Team Overview</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link rel="stylesheet" href="./styles/styles.css">
     </head>
     
     <body>
-    <header>
-        <h1>Hello Team<h1>
+    <header class = "header">
+        <h1>Team Overview<h1>
     </header>
 
     ${teamCards(cards)}
