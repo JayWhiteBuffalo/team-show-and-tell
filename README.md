@@ -4,7 +4,7 @@
 # Description
 a Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person. 
 
-![Screenshot of rendered HTML page](./images/ShowandtellScreenShot.jpeg)(https://drive.google.com/file/d/1B_CvY9zPRg4pUacgPJDGvSKAUjAOHu4R/view "team-show-and-tell Walkthrough")
+[![Screenshot of rendered HTML page](./images/ShowandtellScreenShot.jpeg](https://drive.google.com/file/d/1B_CvY9zPRg4pUacgPJDGvSKAUjAOHu4R/view "team-show-and-tell Walkthrough")
 # Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
