@@ -11,26 +11,32 @@
     background-color: var(--primary-color);
     padding: 1.2em;
     min-width: 100%;
+    text-align: center;
+    background-color: skyblue;
 }
 
 .card-container{
-    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
 }
 
 .title{
     border-bottom: 2px solid black;
     background-color: blue;
     color: white;
-    -webkit-text-stroke-width: .5px;
-    -webkit-text-stroke-color: black;
-    font-weight: bolder;
-    
+    border-radius: 5%;
+    width: 95%;
 }
 
 
 
 
-#Manager-card{
+.card{
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -39,40 +45,10 @@
     margin: 10px;
     padding: auto;
     width: 300px;
-    height: 220px;
+    height: 250px;
     text-align: center;
-    box-shadow: 2px 2px violet;
+    box-shadow: 2px 2px skyblue;
     background-color: bisque;
+    display: table;
 };
 
-#Engineer-card{
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    border: 3px solid black;
-    margin: 10px;
-    padding: auto;
-    width: 300px;
-    height: 220px;
-    text-align: center;
-    box-shadow: 2px 2px violet;
-    background-color: bisque;
-
-};
-
-
-#Intern-card{
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    border: 3px solid black;
-    margin: 10px;
-    padding: auto;
-    width: 300px;
-    height: 220px;
-    text-align: center;
-    box-shadow: 2px 2px violet;
-    background-color: bisque;
-};

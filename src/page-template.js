@@ -10,30 +10,28 @@ const teamCards = (cards) => {
 // Manager card 
 const managerCard = manager => {
     return `
-  <div class= " card-container col-sm-12 col-md-4">
-    <div id="${manager.getRole()}-card">
+  <div class= "card-container">
+    <div class="card">
       <div class = "title">
           <h2 style = "font-weight: bold;">${manager.getName()}</h2>
-          <h3>Role: ${manager.getRole()}</h3>
+          <h3>${manager.getRole()}</h3>
       </div> 
-      <div class = "items">
+      <div>
         <ul>
           <li>ID: ${manager.getId()}</li>
           <li>Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
           <li>Office Number: ${manager.getOfficeNumber()}</li>
         </ul>
       </div>
-    </div>
   </div>`
 };
 
 const engineerCard = engineer => {
     return `
-  <div class= "col-sm-12 col-md-4">
-    <div id="${engineer.getRole()}-card">
+    <div class="card">
       <div class = "title">
         <h2 style = "font-weight: bold;">${engineer.getName()}</h2>
-        <h3>Role: ${engineer.getRole()}</h3>
+        <h3>${engineer.getRole()}</h3>
       </div> 
       <div>
         <ul>
@@ -42,17 +40,15 @@ const engineerCard = engineer => {
           <li>GitHub: <a href="www.github.com/${engineer.getGithub()}">${engineer.getGithub()}</a></li>
         </ul>
       </div>
-    </div>
   </div>`
 };
 
 const internCard = intern => {
     return `
-  <div class= "col-sm-12 col-md-4">
-    <div id="${intern.getRole()}-card">
+    <div class="card">
       <div class = "title">
         <h2 style = "font-weight: bold;">${intern.getName()}</h2>
-        <h3>Role: ${intern.getRole()}</h3>
+        <h3>${intern.getRole()}</h3>
       </div> 
       <div>
         <ul>
@@ -62,7 +58,7 @@ const internCard = intern => {
         </ul>
       </div>
     </div>
-    </div>`
+  `
 };
 
 
@@ -101,10 +97,12 @@ function templateData(cards){
     
     <body>
     <header class = "header">
-        <h1>Team Overview<h1>
+    <h1 style = "font-weight: bolder;">Team Overview<h1>
     </header>
 
     ${teamCards(cards)}
+
+    </div>
 
     </body>
     `
